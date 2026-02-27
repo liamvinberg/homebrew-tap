@@ -1,18 +1,15 @@
 class Sipmon < Formula
   desc "Terminal usage monitor and account switcher for AI providers"
   homepage "https://github.com/liamvinberg/sipmon"
-  url "https://github.com/liamvinberg/sipmon/releases/download/v0.1.0/sipmon-0.1.0.tgz"
-  sha256 "eb19f0c82c92ed64ac4cca69f388e4ea78b631756daab808c93fda194423d41a"
+  url "https://github.com/liamvinberg/sipmon/releases/download/v0.1.1/sipmon-0.1.1-darwin-arm64.tar.gz"
+  sha256 "b5e995f5e65396e7e633c34185172c0e6a31236d1123ec83ea60d3ff54e97de8"
   license "MIT"
 
-  depends_on "node"
-
   def install
-    system "npm", "install", *std_npm_args
-    bin.install_symlink libexec/"bin/sipmon"
+    bin.install "sipmon"
   end
 
   test do
-    assert_match "0.1.0", shell_output("#{bin}/sipmon --version")
+    assert_match "0.1.1", shell_output("#{bin}/sipmon --version")
   end
 end
