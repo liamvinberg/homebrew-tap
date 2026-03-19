@@ -1,9 +1,9 @@
 class Sipmon < Formula
   desc "Terminal usage monitor and account switcher for AI providers"
   homepage "https://github.com/liamvinberg/sipmon"
-  url "https://github.com/liamvinberg/sipmon/releases/download/v0.2.2/sipmon-0.2.2-darwin-arm64.tar.gz"
-  version "0.2.2"
-  sha256 "977bddfa7eeb6d8da41d0750d3028f9e586b36a74326886927e68f11f93bb78a"
+  url "https://github.com/liamvinberg/sipmon/releases/download/v0.2.3/sipmon-0.2.3-darwin-arm64.tar.gz"
+  version "0.2.3"
+  sha256 "ea6e59060bd787dfd4fc49048799b9d4f37f4fba8cb6c6ffc030ac120abe9939"
   license "MIT"
 
   def install
@@ -11,6 +11,6 @@ class Sipmon < Formula
   end
 
   test do
-    assert_match "0.2.2", shell_output("#{bin}/sipmon --version")
+    assert_match "0.2.3", shell_output("#{bin}/sipmon --version")
   end
 end
